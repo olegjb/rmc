@@ -1,14 +1,4 @@
 Hello,
-This should be a start to a consulting business website.
+This should be a start to a consulting business website example.
 For now it includes a menu and a base landing page template.
 
-{% extends 'layout.html' %}
-
-
-{% block title %} RMC {% endblock %}
-
-
-
-{% block main %}
-        
-{% endblock %}
