@@ -6,11 +6,10 @@
         <title>{% block title %}{% endblock %}</title>
 
         <script src="/static/index.js" type="module" defer></script>
+        {% block script %} {% endblock %}
 
-        
         <link rel="stylesheet" href="{% block stylesheet %}{% endblock %}">
         <link rel="stylesheet" href="/static/base.css">
-        
     </head>
     
     <body>
