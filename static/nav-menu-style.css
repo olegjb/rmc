@@ -45,6 +45,8 @@
 .logo-cont h1 {
     text-transform: uppercase;
     color: var(--font-primary-color);
+    font-size: 4rem;
+    font-weight: lighter;
 }
 
 .menu-expanded {

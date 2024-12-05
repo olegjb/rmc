@@ -31,9 +31,6 @@ function navBar() {
 
 // when down, fade away
 
-
-
-
 export {
     navBar
 }
