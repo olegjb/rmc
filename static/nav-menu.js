@@ -25,6 +25,15 @@ function navBar() {
 }
 
 
+// refine event for scroll down
+
+// when scroling up, become more visible
+
+// when down, fade away
+
+
+
+
 export {
     navBar
 }

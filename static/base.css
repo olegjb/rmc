@@ -1,0 +1,15 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(218, 85%, 96%);
+    --font-primary-color: hsl(217, 70%, 18%);
+}
+
+svg {
+ min-width: 30px;
+ height: auto;
+}

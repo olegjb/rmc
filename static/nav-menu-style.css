@@ -1,0 +1,49 @@
+
+
+
+.nav-container {
+    display: grid;
+    grid-template-columns: .2fr .6fr .2fr;
+    grid-template-rows: 1fr;
+    
+
+    border: 2px pink dotted;
+
+    align-items: center;
+
+    gap: .3rem;
+}
+
+.menu-toggle-cont  {
+    display: flex;
+    align-items: center;
+}
+
+
+.ham-menu path {
+    stroke: var(--font-primary-color);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    -webkit-transition: all 880ms ease;
+}
+
+.ham-menu:hover .line-three {
+    d: path("M4 18H20");
+}
+
+
+.ham-menu:hover .line-two {
+    d: path("M4 12H20");
+}
+
+
+.logo-cont {
+    display: flex;
+    align-items: center;
+}
+
+.logo-cont h1 {
+    text-transform: uppercase;
+    color: var(--font-primary-color);
+}
+
