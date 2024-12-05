@@ -4,7 +4,7 @@
 .nav-container {
     display: grid;
     grid-template-columns: .2fr .6fr .2fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: .2fr .8fr;
     
 
     border: 2px pink dotted;
@@ -47,3 +47,16 @@
     color: var(--font-primary-color);
 }
 
+.menu-expanded {
+    display: flex; 
+    gap: .4rem;
+    border: 2px black solid;
+
+    grid-column: 2/3;
+
+    
+}
+
+.hidden {
+    visibility: hidden;
+}
