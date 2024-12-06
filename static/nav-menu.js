@@ -12,7 +12,9 @@ function navBar() {
     // menu structure
     const navCont = makeContainer('div', 'nav-container')
     const menuToggleCont = makeContainer('div', 'menu-toggle-cont')
+
     const hamMenu = makeContainer('div', '.ham-menu')
+    hamMenu.addEventListener('click', toggleExpMenu)
 
 
     // get the ham menu
@@ -34,25 +36,9 @@ function navBar() {
 
     // hover menu func
 
-    function toggleExpMenuBtn () {
-        console.log('running ham toggle')
-        // get the ham-menu
-        const ham = document.querySelector('.ham-menu')
-
-        if (ham) {
-            
-            ham.addEventListener('click', toggleExpMenu)
-            
-            
-
-        }
-
-
-        function toggleExpMenu (e) {
-            const expMenu = e.parentElement.querySelector('.menu-expanded')
-            console.log(expMenu)
-            
-        }
+    function toggleExpMenu (e) {
+        const expMenu = e.target
+        console.log(expMenu)
     }
 }
 
