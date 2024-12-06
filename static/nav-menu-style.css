@@ -1,5 +1,7 @@
 
-
+.ham-menu:hover {
+    cursor: pointer;
+}
 
 .nav-container {
     display: grid;
