@@ -13,6 +13,9 @@ def aloha():
 def nav_bar():
     return render_template('ham-menu.html')
 
+@app.route('/logo')
+def get_logo():
+    return render_template('logo.html')
 if __name__ == '__main__':
     app.run(host='localhost', port=8066, debug=True)
 

@@ -1,3 +1,18 @@
+/* todo, place in own style doc */
+.logo-text {
+    fill: var(--font-primary-color);
+    stroke: var(--font-primary-color);
+
+
+    flex: 1;
+
+
+    font-family: Poppins;
+}
+
+.logo-container{
+    background-color: lightcoral;
+}
 
 .ham-menu:hover {
     cursor: pointer;
@@ -8,9 +23,6 @@
     grid-template-columns: .2fr .6fr .2fr;
     grid-template-rows: .2fr .8fr;
     
-
-    border: 2px pink dotted;
-
     align-items: center;
 
     gap: .3rem;
@@ -54,9 +66,12 @@
 .menu-expanded {
     display: flex; 
     gap: .4rem;
-    border: 2px black solid;
+
+    background-color: hotpink;
 
     grid-column: 2/3;
+
+    min-height: 3rem;
 
     
 }
