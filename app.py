@@ -9,9 +9,9 @@ def aloha():
     return render_template('index.html')
 
 
-@app.route('/nav-bar')
+@app.route('/ham-menu-svg')
 def nav_bar():
-    return render_template('nav-menu.html')
+    return render_template('ham-menu.html')
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8066, debug=True)
