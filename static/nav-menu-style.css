@@ -1,35 +1,31 @@
 /* todo, place in own style doc */
-.logo-container {
+.logo  {
     fill: none;
     stroke: var(--font-primary-color);
-}
-
-.logo rect {
-    border: 2px solid red;
-    stroke: var(--primary-color);
-
-}
-
-.logo {
-    background-color: lightcyan;
+    font-size: 1.2rem;
     fill: white;
     stroke: white;
-    font-weight: 300;
-    font-size: 5rem;
+}
+
+
+.logo-container {
+    background-color: lightcyan;
 
     border: 2px red dotted;
 
 }
 
 
+
+
 .ham-menu:hover {
     cursor: pointer;
 }
 
-.nav-container {
+.nav-bar {
     display: grid;
-    grid-template-columns: .2fr .4fr .2fr;
-    grid-template-rows: .2fr .8fr;
+    grid-template-columns: .2fr .6fr .2fr;
+  
     
     align-items: center;
 
