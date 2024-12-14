@@ -9,21 +9,22 @@ function navBar() {
 
     const navCont = makeContainer('div', 'nav-container')
     
+    const navBar = makeContainer('div', 'nav-bar')
     // hamburger menu
-    navCont.appendChild(hamMenu())
+    navBar.appendChild(hamMenu())
     
     // logo
-    navCont.appendChild(makeLogoContainer())
+    navBar.appendChild(makeLogoContainer())
 
     // TODO quick links function
     const quickLinkMenu = makeContainer('div', 'quick-link')
-    navCont.appendChild(quickLinkMenu)
+    navBar.appendChild(quickLinkMenu)
 
     // TODO would be function, that takes in array
     const expandedMenu = makeContainer('div', 'menu-expanded')
     expandedMenu.classList.add('hidden')
     
-    
+    navCont.appendChild(navBar)
     navCont.appendChild(expandedMenu)
 
     function makeLogoContainer () {

@@ -1,18 +1,26 @@
 /* todo, place in own style doc */
-.logo-text {
-    fill: var(--font-primary-color);
+.logo-container {
+    fill: none;
     stroke: var(--font-primary-color);
-
-
-    flex: 1;
-
-
-    font-family: Poppins;
 }
 
-.logo-container{
-    background-color: lightcoral;
+.logo rect {
+    border: 2px solid red;
+    stroke: var(--primary-color);
+
 }
+
+.logo {
+    background-color: lightcyan;
+    fill: white;
+    stroke: white;
+    font-weight: 300;
+    font-size: 5rem;
+
+    border: 2px red dotted;
+
+}
+
 
 .ham-menu:hover {
     cursor: pointer;
@@ -20,12 +28,14 @@
 
 .nav-container {
     display: grid;
-    grid-template-columns: .2fr .6fr .2fr;
+    grid-template-columns: .2fr .4fr .2fr;
     grid-template-rows: .2fr .8fr;
     
     align-items: center;
 
     gap: .3rem;
+
+    background-color: lightgray;
 }
 
 .menu-toggle-cont  {
