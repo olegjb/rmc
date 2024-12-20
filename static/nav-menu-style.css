@@ -16,8 +16,6 @@
 }
 
 
-
-
 .ham-menu:hover {
     cursor: pointer;
 }
@@ -34,6 +32,7 @@
     background-color: lightgray;
 }
 
+
 .menu-toggle-cont  {
     display: flex;
     align-items: center;
@@ -46,6 +45,7 @@
     stroke-linejoin: round;
     -webkit-transition: all 880ms ease;
 }
+
 
 .ham-menu:hover .line-three {
     d: path("M4 18H20");
