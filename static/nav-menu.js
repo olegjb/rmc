@@ -93,7 +93,9 @@ function navBar() {
     function toggleExpMenu () { 
         if (expandedMenu.classList.contains('hidden')) {
             expandedMenu.classList.remove('hidden')
+            expandedMenu.classList.add('expanded')
         } else {
+            expandedMenu.classList.remove('expanded')
             expandedMenu.classList.add('hidden')
         }
     }

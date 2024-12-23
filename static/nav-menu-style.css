@@ -87,8 +87,8 @@
 .logo-cont h1 {
     text-transform: uppercase;
     color: var(--font-primary-color);
-    font-size: 4rem;
-    font-weight: lighter;
+    font-size: 6rem;
+    font-weight: 100;
 }
 
 .menu-expanded {
@@ -96,14 +96,43 @@
     gap: .4rem;
 
     background-color: hotpink;
+    
 
     grid-column: 2/3;
 
     min-height: 3rem;
 
+
     
 }
 
+.menu-expanded.expanded {
+    animation: bounce-out-vert;
+    animation-duration: 120ms;
+    animation-delay: 60ms;
+    animation-fill-mode: forwards;
+    
+    transform-origin: top;
+    
+    transform: scaleY(0);
+
+}
+
+
+@keyframes bounce-out-vert {
+    from {
+        transform: scaleY(0);
+        
+    }
+
+    96% {
+        transform: scaleY(1.11);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
 
 
 .hidden {
