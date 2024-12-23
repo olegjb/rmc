@@ -31,11 +31,44 @@ body {
     min-width: 100vw;
     min-height: 100vh;
 
-    border: 3px lightcoral solid;
+    
     z-index: 1000;
     
 }
 
 body {
     min-height: 200vh;
+}
+
+
+.hero-section {
+    background-color: black;
+    height: 100vh;
+
+    display: flex;
+    position: relative;
+}
+
+.hero-image {
+    background-image: url(/static/img/hero.jpg);
+    min-width: 50px;
+    max-width: 100%;
+    flex: 1;
+    
+}
+
+.hero-text {
+    border: 3px lightcoral solid;
+    position: absolute;
+    top: 13%;
+    left: 26%;
+}
+
+.landing-content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: gray;
 }

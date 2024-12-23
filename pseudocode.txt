@@ -11,3 +11,7 @@ current direction
     functionality (nav menu) :
         autohide/unhide when scrolling (todo)
 
+once base landing page is set 
+    refactor for customization
+
+    
