@@ -1,12 +1,23 @@
-html {
+/* #ui-layer {
     position: relative;
-}
+} */
 
 .nav-container {
-    position: sticky;
+    
     width: 100vw;
-    top: 0px;
+    /* position: sticky;
+    top: 0px; */
+    
+    
  }
+
+.nav-container.scroll-down {
+    opacity: .1;
+}
+
+.nav-container:hover {
+    opacity: 1;
+}
 
 /* todo, place in own style doc */
 .logo  {
@@ -28,6 +39,7 @@ html {
 
 .ham-menu:hover {
     cursor: pointer;
+    
 }
 
 .nav-bar {

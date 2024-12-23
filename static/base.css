@@ -15,17 +15,25 @@ svg {
 }
 
 html {
-    position: relative;
+    
     background-color: var(--primary-color);
 
 }
 
+body {
+    position: relative;
+}
+
 #ui-layer {
-    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
     min-width: 100vw;
     min-height: 100vh;
 
     border: 3px lightcoral solid;
+    z-index: 1000;
+    
 }
 
 body {
