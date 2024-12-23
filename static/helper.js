@@ -14,6 +14,23 @@ function clearContainer (parentContainer) {
 }
 
 
+let previousScrollPos = 0
+
+function isScrollingDown () {
+    let downScroll = false
+    let scrollPos = window.pageYOffset
+
+    if (scrollPos > previousScrollPos) {
+        console.log('scrolling down')
+        downScroll = true
+    }
+
+    previousScrollPos = scrollPos
+
+    return downScroll
+}
+
 export {
-    makeContainer
+    makeContainer,
+    isScrollingDown,
 }

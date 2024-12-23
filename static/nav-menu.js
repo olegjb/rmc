@@ -1,6 +1,26 @@
-import { makeContainer } from "./helper.js"
+import { isScrollingDown, makeContainer } from "./helper.js"
 console.log('nav bar/menu script')
 
+
+const checkScrollDir = () => {
+    const menuLite = document.querySelector('.nav-container')
+    
+    if (!menuLite) {
+        return
+    }
+
+    // scroll down/up events
+    if (isScrollingDown()) {
+        menuLite.classList.add('scroll-down')
+        menuLite.classList.remove('scroll-up')
+    } else {
+        menuLite.classList.add('scroll-up')
+        menuLite.classList.remove('scroll-down')
+    }
+}
+
+
+window.addEventListener('scroll', checkScrollDir)
 
 function navBar() {
     'returns a nav-bar component'
@@ -8,6 +28,8 @@ function navBar() {
 
 
     const navCont = makeContainer('div', 'nav-container')
+
+
     
     const navBar = makeContainer('div', 'nav-bar')
     // hamburger menu

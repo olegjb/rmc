@@ -15,14 +15,15 @@ svg {
 }
 
 html {
+    position: relative;
     background-color: var(--primary-color);
 
 }
 
 #ui-layer {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    /* position: absolute; */
+    min-width: 100vw;
+    min-height: 100vh;
 
     border: 3px lightcoral solid;
 }

@@ -1,3 +1,13 @@
+html {
+    position: relative;
+}
+
+.nav-container {
+    position: sticky;
+    width: 100vw;
+    top: 0px;
+ }
+
 /* todo, place in own style doc */
 .logo  {
     fill: none;
@@ -81,6 +91,8 @@
 
     
 }
+
+
 
 .hidden {
     visibility: hidden;
