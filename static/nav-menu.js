@@ -1,4 +1,4 @@
-import { isScrollingDown, makeContainer } from "./helper.js"
+import { checkElementVisibility, checkVirticalVisPercent, isScrollingDown, makeContainer } from "./helper.js"
 console.log('nav bar/menu script')
 
 
@@ -9,13 +9,30 @@ const checkScrollDir = () => {
         return
     }
 
+    const heroImg = document.querySelector('.hero-image')
+
     // scroll down/up events
     if (isScrollingDown()) {
+        if (heroImg) {
+            paralaxImage(heroImg)
+        }
+        
         menuLite.classList.add('scroll-down')
         menuLite.classList.remove('scroll-up')
+
+
     } else {
         menuLite.classList.add('scroll-up')
         menuLite.classList.remove('scroll-down')
+
+
+    }
+
+
+
+    function paralaxImage (image) {
+        console.log(`testing paralax ${Math.abs(checkVirticalVisPercent(image) * 10)}`)
+        // image.style.transform = `translateY(${Math.abs(checkVirticalVisPercent(image) * 10)}%`
     }
 }
 

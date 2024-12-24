@@ -101,8 +101,6 @@
     
     grid-column: 2/3;
     min-height: 3rem;
-
-    
 }
 
 
@@ -135,8 +133,9 @@
 }
 
 .expanded-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
