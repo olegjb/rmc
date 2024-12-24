@@ -22,7 +22,7 @@ def menu_exp():
     return render_template('expanded-menu-content.html')
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8066, debug=True)
+    # app.run(host='localhost', port=8066, debug=True)
 
     # for deployment
-    # app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0')
