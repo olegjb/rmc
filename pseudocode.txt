@@ -9,9 +9,11 @@ current direction
     replicate and expand upon 2+ examples.
 
     functionality (nav menu) :
-        autohide/unhide when scrolling (todo)
+        autohide/unhide when scrolling (complete)
+        move image vertically when scrolling (todo).
+
 
 once base landing page is set 
-    refactor for customization
+    refactor for customization (todo)
 
-    
+    each section should be its own file/template

@@ -5,8 +5,8 @@
 .nav-container {
     
     width: 100vw;
-    /* position: sticky;
-    top: 0px; */
+    
+    background: none;
     
     
  }
@@ -23,17 +23,6 @@
 .logo  {
     fill: none;
     stroke: var(--font-primary-color);
-    font-size: 1.2rem;
-    fill: white;
-    stroke: white;
-}
-
-
-.logo-container {
-    background-color: lightcyan;
-
-    border: 2px red dotted;
-
 }
 
 
@@ -51,20 +40,30 @@
 
     gap: .3rem;
 
-    background-color: lightgray;
+    background-color: var(--primary-color);
+
+    min-height: 11vh;
 }
 
 
 .menu-toggle-cont  {
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
 }
 
+.ham-menu {
+    min-height: 3.2vh;
+}
 
 .ham-menu path {
     stroke: var(--font-primary-color);
     stroke-linecap: round;
     stroke-linejoin: round;
+    stroke-width: .21rem;
     -webkit-transition: all 880ms ease;
 }
 
@@ -84,11 +83,11 @@
     align-items: center;
 }
 
-.logo-cont h1 {
+.logo {
     text-transform: uppercase;
     color: var(--font-primary-color);
-    font-size: 6rem;
-    font-weight: 100;
+    font-weight: 222;
+
 }
 
 .menu-expanded {

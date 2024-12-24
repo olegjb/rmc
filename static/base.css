@@ -51,10 +51,11 @@ body {
 
 .hero-image {
     background-image: url(/static/img/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     min-width: 50px;
     max-width: 100%;
     flex: 1;
-    
 }
 
 .hero-text {
@@ -71,4 +72,9 @@ body {
     align-items: center;
 
     background-color: gray;
+}
+
+
+.landing-footer {
+    min-height: 50vh;
 }
