@@ -26,9 +26,8 @@
 }
 
 
-.ham-menu:hover {
+.ham-menu:hover, .logo:hover {
     cursor: pointer;
-    
 }
 
 .nav-bar {

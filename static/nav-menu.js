@@ -45,7 +45,9 @@ function navBar() {
     // TODO would be function, that takes in array
     const expandedMenu = makeContainer('div', 'menu-expanded')
     expandedMenu.classList.add('hidden')
-    
+    getExpnadedMenuContent(expandedMenu)
+
+
     navCont.appendChild(navBar)
     navCont.appendChild(expandedMenu)
 
@@ -63,6 +65,20 @@ function navBar() {
         //
 
         return logoContainer
+    }
+
+    function getExpnadedMenuContent (parentContainer) {
+        // fetch the default template
+        fetch('/expanded-menu-content')
+        
+        // fill in the html
+        .then(content => {
+            return content.text()
+        })
+        .then (tcontent => {
+            parentContainer.innerHTML = tcontent
+        })
+
     }
 
     function hamMenu () {
