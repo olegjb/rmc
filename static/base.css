@@ -24,6 +24,10 @@ body {
     position: relative;
 }
 
+h1 {
+    font-weight: 100;
+}
+
 #ui-layer {
     position: fixed;
     top: 0;
