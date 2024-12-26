@@ -67,6 +67,7 @@ function navBar() {
 
     navCont.appendChild(navBar)
     navCont.appendChild(expandedMenu)
+    navCont.appendChild(huePicker())
 
     function makeLogoContainer () {
         const logoContainer = makeContainer('div', 'logo-container')
@@ -96,6 +97,7 @@ function navBar() {
             parentContainer.innerHTML = tcontent
         })
 
+        
     }
 
     function hamMenu () {
@@ -116,6 +118,36 @@ function navBar() {
             menuToggleCont.appendChild(hamMenu)
             return menuToggleCont
     }
+
+    function huePicker () {
+        const sliderLabel = makeContainer('label', 'slider-label')
+        sliderLabel.setAttribute('for', 'hue-slider')
+        sliderLabel.textContent = 'select main hue'
+        
+        const hSlider = makeContainer('input', 'hue-slider')
+        hSlider.setAttribute('id', 'hue-picker')
+        hSlider.setAttribute('type', 'range')
+        hSlider.setAttribute('min', 0)
+        hSlider.setAttribute('max', 360)
+        hSlider.value = 218
+
+        hSlider.addEventListener('input', updateHue)
+
+        sliderLabel.appendChild(hSlider)
+
+        return sliderLabel
+
+        function updateHue (e) {
+            const hueVal = e.target.value
+            console.log(hueVal)
+
+            document.documentElement.style.setProperty('--primary-color', `hsl(${hueVal}, 85%, 96%)`)
+            document.documentElement.style.setProperty('--font-primary-color', `hsl(${hueVal}, 70%, 18%)`)
+        }
+    }
+    // attach to expanded menu
+
+    
 
     return navCont
 
