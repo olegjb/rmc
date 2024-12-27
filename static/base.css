@@ -7,6 +7,8 @@
 :root {
     --primary-color: hsl(218, 85%, 96%);
     --font-primary-color: hsl(217, 70%, 18%);
+    --primary-med: hsl(218, 35%, 35%);
+    --primary-dark: hsl(218, 32%, 17%);
 }
 
 svg {
@@ -46,7 +48,9 @@ body {
 
 
 .hero-section {
-    background-color: black;
+    background-color: var(--font-primary-color);
+    background-color: var(--primary-color);
+    background-color: var(--primary-dark);
     height: 100vh;
 
     display: flex;
@@ -64,9 +68,10 @@ body {
     background-position: 0% 70%;
     background-repeat: no-repeat;
     background-size: cover;
+    background: none;
     
-
 }
+
 
 .hero-text {
     border: 3px lightcoral solid;
@@ -81,7 +86,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: gray;
+    background-color: var(--primary-med);
 }
 
 

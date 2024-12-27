@@ -143,6 +143,9 @@ function navBar() {
 
             document.documentElement.style.setProperty('--primary-color', `hsl(${hueVal}, 85%, 96%)`)
             document.documentElement.style.setProperty('--font-primary-color', `hsl(${hueVal}, 70%, 18%)`)
+            document.documentElement.style.setProperty('--primary-med', `hsl(${hueVal}, 35%, 35%)`)
+            document.documentElement.style.setProperty('--contrast-light', `hsl(${hueVal}, 35%, 91%)`)
+            document.documentElement.style.setProperty('--primary-dark', `hsl(${hueVal}, 32%, 17%)`)
         }
     }
     // attach to expanded menu
