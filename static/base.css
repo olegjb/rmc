@@ -9,6 +9,8 @@
     --font-primary-color: hsl(217, 70%, 18%);
     --primary-med: hsl(218, 35%, 35%);
     --primary-dark: hsl(218, 32%, 17%);
+
+    --font-fam: Helvetica, sans-serif;
 }
 
 svg {
@@ -24,6 +26,8 @@ html {
 
 body {
     position: relative;
+
+    font-family: var(--font-fam);
 }
 
 h1 {
