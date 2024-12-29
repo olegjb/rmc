@@ -53,7 +53,6 @@ function huePicker () {
     hSlider.addEventListener('input', updateHue)
 
     sliderLabel.appendChild(hSlider)
-
     return sliderLabel
 
     function updateHue (e) {
@@ -69,11 +68,92 @@ function huePicker () {
 }
 
 
+
+function palletteSelect () {
+    const pMenu = makeContainer('div', 'pallete-selet')
+
+    const paletteOptions = {
+        'jewel' : 'bright',
+        'pastel' : 'muted',
+        'earthy' : 'neutral',
+        'bright' : 'very bright',
+    }
+
+    const optLen = Object.keys(paletteOptions).length
+
+    console.log(`test palete select ${optLen}`)
+
+    for (let i = 0; i < optLen; i++) {
+        
+        const pLabel = makeContainer('label', 'palette-option')
+        pLabel.textContent = Object.keys(paletteOptions)[i]
+
+        const pOption = makeContainer('input', 'palette-sel')
+        pOption.setAttribute('type', 'radio')
+        pOption.setAttribute('name', 'palette-option')
+        pOption.setAttribute('value', Object.keys(paletteOptions)[i] )
+        pLabel.appendChild(pOption)
+
+
+        pMenu.appendChild(pLabel)
+        pOption.addEventListener('change', updatePalette)
+    }
+
+    return pMenu
+
+    function updatePalette (e) {
+        // get the current hue color
+        const huePick = document.querySelector('#hue-picker')
+
+        if (!huePick) {
+            console.log('cannot locate hue-picker')
+            return
+        }
+
+        const hueVal = huePick.value
+
+        const paletteVal = e.target.value
+
+        console.log(`test pal val ${paletteVal}`)
+
+        let primeColor, fontColor
+
+        switch (paletteVal) {
+            case 'jewel':
+                primeColor = `hsl(${hueVal}, 80%, 40%)`
+                fontColor = `hsl(${hueVal}, 90%, 90%)`
+                break
+            case 'pastel':
+                primeColor = `hsl(${hueVal}, 50%, 85%)`
+                fontColor = `hsl(${hueVal}, 30%, 20%)`
+                break
+            case 'earthy':
+                primeColor = `hsl(${hueVal}, 30%, 50%)`
+                fontColor = `hsl(${hueVal}, 10%, 10%)`
+                break
+            case 'bright':
+                primeColor = `hsl(${hueVal}, 100%, 60%)`
+                fontColor = `hsl(${hueVal}, 80%, 10%)`
+                break
+            default:
+                primeColor = `hsl(${hueVal}, 50%, 50%)`
+                fontColor = `hsl(${hueVal}, 0%, 0%)`
+                break
+        }
+
+        
+        document.documentElement.style.setProperty('--primary-color', primeColor)
+        document.documentElement.style.setProperty('--font-primary-color', fontColor)
+        console.log(primeColor, fontColor)
+    }
+}
+
+
 function makeSettingsMenu () {
     const menu = makeContainer('div', 'settings-menu')
     menu.appendChild(huePicker())
     menu.appendChild(fontSelector())
-    
+    menu.appendChild(palletteSelect())
     return menu
 }
 

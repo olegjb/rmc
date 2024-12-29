@@ -15,7 +15,7 @@ const checkScrollDir = () => {
     // scroll down/up events
     if (isScrollingDown()) {
         if (heroImg) {
-            paralaxImage(heroImg)
+            // paralaxImage(heroImg)
         }
         
         menuLite.classList.add('scroll-down')
