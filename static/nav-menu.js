@@ -68,6 +68,7 @@ function navBar() {
     navCont.appendChild(navBar)
     navCont.appendChild(expandedMenu)
     navCont.appendChild(huePicker())
+    navCont.appendChild(fontSelector())
 
     function makeLogoContainer () {
         const logoContainer = makeContainer('div', 'logo-container')
@@ -118,6 +119,39 @@ function navBar() {
             menuToggleCont.appendChild(hamMenu)
             return menuToggleCont
     }
+
+    function fontSelector ( ) {
+        const fontOptions = [
+            'Arial, sans-serif',
+            "Times New Roman', serif",
+            "Courier New', monospace",
+        ]
+
+        const fSelectLabel = makeContainer('label', 'font-sel-label')
+        fSelectLabel.setAttribute('for', 'font-select')
+        fSelectLabel.textContent = 'select font'
+        
+
+        const fontSelectInput = makeContainer('select', 'font-select')
+        fontSelectInput.addEventListener('change', updateFont)
+
+        fontOptions.forEach(option => {
+            const opt = makeContainer('option', 'font-option')
+            opt.textContent = option
+            fontSelectInput.appendChild(opt)
+        })
+
+        
+        fSelectLabel.appendChild(fontSelectInput)
+        return fSelectLabel
+
+        function updateFont (e) {
+            const fontVal = e.target.value
+            console.log(fontVal)
+            document.documentElement.style.setProperty('--font-fam', fontVal)
+        }
+    }
+
 
     function huePicker () {
         const sliderLabel = makeContainer('label', 'slider-label')
