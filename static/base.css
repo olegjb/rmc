@@ -49,6 +49,7 @@ h1 {
 
 body {
     min-height: 200vh;
+    transition: background-color 500ms, color 500ms;
 }
 
 
