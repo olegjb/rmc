@@ -92,9 +92,13 @@
 
 }
 
+.menu-expanded, .settings-menu {
+    background-color: var(--primary-color);
+}
+
 .menu-expanded {
 
-    background-color: var(--primary-color);
+    
     
     grid-column: 2/3;
     min-height: 3rem;
@@ -126,7 +130,8 @@
 .menu-expanded li:hover, .menu-expanded li:active {
     
     background-color: var(--contrast-light);
-    
+    background-color: var(--font-primary-color);
+    color: var(--primary-color);
 }
 
 .expanded-content {

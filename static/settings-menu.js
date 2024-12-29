@@ -70,7 +70,7 @@ function huePicker () {
 
 
 function palletteSelect () {
-    const pMenu = makeContainer('div', 'pallete-selet')
+    const pMenu = makeContainer('div', 'pallete-select')
 
     const paletteOptions = {
         'jewel' : 'bright',
