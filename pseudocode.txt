@@ -15,5 +15,19 @@ current direction
 
 once base landing page is set 
     refactor for customization (todo)
+        choice of main hue (complete)
+        choice of palette & display (todo)
 
-    each section should be its own file/template
+    choice of fonts (complete)
+
+refactor to make a setting menu (todo)
+    allow expanded menu to be dynamic (ex, base, settings, advanced)
+        or show with tabs?
+
+
+
+each section should be its own file/template (todo)
+    ex: hero section will load a template based on user choice
+        same with menu/nav, content, footer, ect
+
+

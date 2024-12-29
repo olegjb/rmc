@@ -123,8 +123,11 @@ function navBar() {
     function fontSelector ( ) {
         const fontOptions = [
             'Arial, sans-serif',
-            "Times New Roman', serif",
-            "Courier New', monospace",
+            "Times New Roman, serif",
+            "Courier New, monospace",
+            "Poppins",
+            "Roboto",
+            "Playfair",
         ]
 
         const fSelectLabel = makeContainer('label', 'font-sel-label')
