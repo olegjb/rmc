@@ -96,6 +96,35 @@
     background-color: var(--primary-color);
 }
 
+.settings-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: .3rem;
+}
+.settings-menu label {
+    display: flex;
+    gap: 1.5rem;
+    font-size: large;
+    font-weight: bolder;
+} 
+
+.font-select {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+
+    background-color: var(--primary-color);
+
+}
+
+.font-select:hover {
+    outline: .3rem solid var(--font-primary-color);
+}
+
 .menu-expanded {
 
     
