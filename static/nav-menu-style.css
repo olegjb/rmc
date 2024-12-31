@@ -57,8 +57,28 @@
     width: 100%;
 }
 
-.ham-menu {
+.ham-menu, .setting-toggle-cont {
     min-height: 3.2vh;
+}
+.setting-toggle-cont svg {
+    max-width: min(25px, 20% );
+}
+
+
+
+.setting-toggle-cont svg:hover {
+    animation: wiggle;
+    
+    transform: rotate(12deg);
+}
+
+@keyframes wiggle {
+
+    to {
+        transform: rotate(0deg);
+    }
+
+    
 }
 
 .ham-menu path {
@@ -95,6 +115,8 @@
 .menu-expanded, .settings-menu {
     background-color: var(--primary-color);
 }
+
+
 
 .settings-menu {
     display: flex;

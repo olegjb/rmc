@@ -154,6 +154,8 @@ function makeSettingsMenu () {
     menu.appendChild(huePicker())
     menu.appendChild(fontSelector())
     menu.appendChild(palletteSelect())
+
+    menu.classList.add('hidden')
     return menu
 }
 
