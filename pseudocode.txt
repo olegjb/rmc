@@ -16,18 +16,25 @@ current direction
 once base landing page is set 
     refactor for customization (todo)
         choice of main hue (complete)
-        choice of palette & display (todo)
+        choice of palette & display (complete)
 
     choice of fonts (complete)
 
-refactor to make a setting menu (todo)
+refactor to make a setting menu (complete)
     allow expanded menu to be dynamic (ex, base, settings, advanced)
         or show with tabs?
+
+re-structure style and layout to make it feel more intuative (todo)
 
 
 
 each section should be its own file/template (todo)
     ex: hero section will load a template based on user choice
         same with menu/nav, content, footer, ect
+
+    idea here is that when buiding a 'web-component' it can be used anywhere
+        content is filled out via md docs or similar that can be converted to md files.
+            why md? its easier than trying to stucture paragraph, list, and title elements (auto generated via md to html).
+        user should be able to drop in any content into a folder and have it appear in the website
 
 
