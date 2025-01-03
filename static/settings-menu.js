@@ -81,6 +81,7 @@ function huePicker () {
 
 function palletteSelect () {
     const pMenu = makeContainer('div', 'pallete-select')
+    pMenu.textContent = 'select a color pallete'
 
     const paletteOptions = {
         'jewel' : 'bright',
