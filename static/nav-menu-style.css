@@ -112,23 +112,59 @@
 
 }
 
-.menu-expanded, .settings-menu {
-    background-color: var(--primary-color);
-}
+
 
 
 
 .settings-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 
-    gap: .3rem;
+    gap: 1.2rem;
     grid-column: 2/3;
     height: 100%;
     transform: scaleX(0);
 
+    
+
 }
+
+.pallete-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.palette-sel {
+    appearance: none;
+    border: 2px solid var(--font-primary-color);
+    border-radius: 50%;
+
+    width: .9rem;
+    height: .9rem;
+
+
+}
+
+.palette-sel:focus-within {
+    color: var(--font-primary-color);
+}
+
+.palette-sel:checked {
+    background-color: var(--font-primary-color);
+    color: var(--primary-color);
+
+    border: 2px solid;
+}
+
+.menu-setting-toggle svg  {
+    
+    border: 2xp solid pink;
+    fill: var(--font-primary-color);
+    stroke: var(--font-primary-color);
+}
+
 .settings-menu label {
     display: flex;
     gap: 1.5rem;
@@ -144,6 +180,7 @@
     background: none;
 
     background-color: var(--primary-color);
+    color: var(--font-primary-color);
 
 }
 
@@ -169,21 +206,41 @@
     outline: .3rem solid var(--font-primary-color);
 }
 
-.menu-expanded {
+.menu-expanded, .settings-menu {
     
     min-height: 3rem;
     transform: scaleX(0);
+    background-color: var(--primary-color);
+    min-width: max(50vh, 50px);
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
     .menu-expanded, .settings-menu {
         max-width: 50vw;
     }
+} */
+
+@media (max-width: 800px) {
+
+    .expanded-container {
+        width: 100vw;
+        height: auto;
+    }
+
+    .settings-menu {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .menu-expanded {
+        grid-column: 1/2;
+    }
+
 }
 
 
+
 .expanded-container {
-    border:  2px dotted pink;
     display: grid;
     grid-template-columns: .5fr .5fr;
 }
@@ -218,8 +275,7 @@
 
 .expanded-content {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 
