@@ -184,23 +184,7 @@
 
 }
 
-.hue-slider {
 
-    background-color: var(--primary-color);
-     
-    
-}
-
-.hue-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-
-.hue-slider::-webkit-slider-thumb:hover {
-
-    transform: scale(1.2);
-}
 
 .font-select:hover {
     outline: .3rem solid var(--font-primary-color);

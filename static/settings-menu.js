@@ -41,7 +41,7 @@ function fontSelector ( ) {
 function huePicker () {
     const sliderLabel = makeContainer('label', 'slider-label')
     sliderLabel.setAttribute('for', 'hue-slider')
-    sliderLabel.textContent = 'select main hue'
+   
     
     const hSlider = makeContainer('input', 'hue-slider')
     hSlider.setAttribute('id', 'hue-picker')
@@ -49,6 +49,9 @@ function huePicker () {
     hSlider.setAttribute('min', 0)
     hSlider.setAttribute('max', 360)
     hSlider.value = 218
+    sliderLabel.textContent = `select main hue:`
+    const valPara = makeContainer('para', 'hue-slide-value')
+    sliderLabel.appendChild(valPara)
 
     hSlider.addEventListener('input', updateHue)
 
@@ -59,11 +62,18 @@ function huePicker () {
         const hueVal = e.target.value
         console.log(hueVal)
 
+        // const valPara = document.querySelector('hue-slide-value')
+        valPara.textContent = hueVal
+
+        
+
         document.documentElement.style.setProperty('--primary-color', `hsl(${hueVal}, 85%, 96%)`)
         document.documentElement.style.setProperty('--font-primary-color', `hsl(${hueVal}, 70%, 18%)`)
         document.documentElement.style.setProperty('--primary-med', `hsl(${hueVal}, 35%, 35%)`)
         document.documentElement.style.setProperty('--contrast-light', `hsl(${hueVal}, 35%, 91%)`)
         document.documentElement.style.setProperty('--primary-dark', `hsl(${hueVal}, 32%, 17%)`)
+
+        
     }
 }
 
