@@ -126,8 +126,8 @@
     gap: .3rem;
     grid-column: 2/3;
     height: 100%;
+    transform: scaleX(0);
 
-    
 }
 .settings-menu label {
     display: flex;
@@ -172,6 +172,7 @@
 .menu-expanded {
     
     min-height: 3rem;
+    transform: scaleX(0);
 }
 
 @media (min-width: 800px) {
@@ -234,10 +235,19 @@
     
     transform-origin: left;
     
-    transform: scaleY(0);
 
 }
 
+
+.settings-menu.expanded {
+    animation: bounce-out-horiz;
+    animation-duration: 120ms;
+    animation-delay: 60ms;
+    animation-fill-mode: forwards;
+    
+    
+    transform-origin: right;
+}
 
 @keyframes bounce-out-vert {
     from {
