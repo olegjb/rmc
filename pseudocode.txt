@@ -38,3 +38,9 @@ each section should be its own file/template (todo)
         user should be able to drop in any content into a folder and have it appear in the website
 
 
+main style and vision
+    the intent is to mmake this an exploritory space.
+        find the GENERAL FEEL for your site.
+        I mean general. "this is art, not just a business"
+            'what do you want to tell to your clients.'
+                

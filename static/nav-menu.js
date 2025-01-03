@@ -46,8 +46,6 @@ function navBar() {
 
 
     const navCont = makeContainer('div', 'nav-container')
-
-
     
     const navBar = makeContainer('div', 'nav-bar')
     // hamburger menu
@@ -61,6 +59,10 @@ function navBar() {
     quickLinkMenu.appendChild(settingsToggle())
     navBar.appendChild(quickLinkMenu)
 
+    // a contianer for holding expanded and setting menu
+
+    const expCont = makeContainer('div', 'expanded-container')
+
     // TODO would be function, that takes in array
     const expandedMenu = makeContainer('div', 'menu-expanded')
     expandedMenu.classList.add('hidden')
@@ -68,9 +70,9 @@ function navBar() {
 
 
     navCont.appendChild(navBar)
-    navCont.appendChild(expandedMenu)
-    // navCont.appendChild(huePicker())
-    // navCont.appendChild(fontSelector())
+    expCont.appendChild(expandedMenu)
+
+    navCont.appendChild(expCont)
 
     function makeLogoContainer () {
         const logoContainer = makeContainer('div', 'logo-container')
@@ -144,7 +146,7 @@ function navBar() {
             return menuToggleCont
     }
 
-    navCont.appendChild(makeSettingsMenu())
+    expCont.appendChild(makeSettingsMenu())
     
 
     return navCont

@@ -124,6 +124,10 @@
     align-items: center;
 
     gap: .3rem;
+    grid-column: 2/3;
+    height: 100%;
+
+    
 }
 .settings-menu label {
     display: flex;
@@ -166,7 +170,7 @@
 }
 
 .menu-expanded {
-    grid-column: 2/3;
+    
     min-height: 3rem;
 }
 
@@ -177,6 +181,11 @@
 }
 
 
+.expanded-container {
+    border:  2px dotted pink;
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+}
 
 .menu-expanded li {
     
