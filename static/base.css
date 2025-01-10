@@ -66,6 +66,8 @@ body {
 
 .hero-image {
     background-image: url(/static/img/hero.jpg);
+    background-image: url(/static/img/hero2.jpg);
+    
     min-width: 50px;
     max-width: 100%;
     flex: 1;
@@ -75,15 +77,28 @@ body {
     background-position: 0% 70%;
     background-repeat: no-repeat;
     background-size: cover;
-    background: none;
+    /* background: none; */
     
 }
 
 
 .hero-text {
     position: absolute;
-    top: 13%;
+
+    transform: translate(-50%, -50%);
+
+    top: 50%;
     left: 26%;
+
+    border: 2px pink dotted;
+
+    background-color: var(--font-primary-color);
+
+    height: 50%;
+    width: 50%;
+
+    opacity: .96;
+    
 }
 
 .landing-content {
