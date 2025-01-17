@@ -11,6 +11,8 @@
     --primary-dark: hsl(218, 32%, 17%);
 
     --font-fam: Helvetica, sans-serif;
+
+    --nav-height: 11vh;
 }
 
 svg {
@@ -41,12 +43,8 @@ h1 {
     left: 0;
     min-width: 100vw;
     min-height: 100vh;
-
-    
     z-index: 1000;
-
     pointer-events: none;
-    
 }
 
 body {
@@ -61,7 +59,20 @@ body {
     height: 100vh;
 
     display: flex;
-    position: relative;
+    /* position: relative; */
+
+    align-items: center;
+    justify-content: space-around;
+    opacity: .96;
+    padding-top: var(--nav-height);
+}
+
+@media (max-width: 800px ) {
+    .hero-section {
+        flex-direction: column;
+    }
+
+    
 }
 
 .hero-image {
@@ -69,35 +80,50 @@ body {
     background-image: url(/static/img/hero2.jpg);
     
     min-width: 50px;
-    max-width: 100%;
+    width: 100%;
     flex: 1;
+
+    /* border: 2px green solid; */
+    height: 100%;
+
+    border-radius: .33rem;
 
     /* for paralax */
     background-attachment: fixed;
-    background-position: 0% 70%;
+    background-position: 0% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    
     /* background: none; */
     
 }
 
 
 .hero-text {
-    position: absolute;
+    /* position: absolute;
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 
-    top: 50%;
-    left: 26%;
+    /* top: 50%;
+    left: 26%; */
 
-    border: 2px pink dotted;
-
-    background-color: var(--font-primary-color);
+    /* background-color: var(--font-primary-color); */
 
     height: 50%;
     width: 50%;
 
-    opacity: .96;
+    
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 3.3rem;
+
+    width: 100%;
+
     
 }
 
