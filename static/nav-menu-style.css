@@ -129,6 +129,8 @@
     height: 100%;
     transform: scaleX(0);
 
+    padding: var(--spacing-lg) var(--spacing-md);
+
     
 
 }

@@ -177,7 +177,7 @@ span.ripple {
 
     width: 100%;
 
-    
+    padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .landing-content {
