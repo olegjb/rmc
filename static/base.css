@@ -16,6 +16,10 @@
 
     --gray: hsl(0, 0%, 22%);
     
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
 }
 
 svg {
@@ -126,6 +130,7 @@ span.ripple {
 .hero-image {
     background-image: url(/static/img/hero.jpg);
     background-image: url(/static/img/hero2.jpg);
+    background-image: url(/static/img/hero3.jpg);
     
     min-width: 50px;
     width: 100%;
@@ -185,8 +190,15 @@ span.ripple {
 
 }
 
+.landing-content p {
+    padding: var(--spacing-lg) var(--spacing-md);
+}
 
 .landing-footer {
-    min-height: 10vh;
+    min-height: var(--nav-height);
     background: none;
+    border-top: 2px solid var(--font-primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
