@@ -2,6 +2,44 @@ import { checkElementVisibility, checkVirticalVisPercent, isScrollingDown, makeC
 import { makeSettingsMenu } from "./settings-menu.js"
 console.log('nav bar/menu script')
 
+const coaBtn = document.querySelector('.btn-call-to-action')
+
+if (coaBtn) {
+   coaBtn.addEventListener('click', createRippleFx)
+}
+
+function createRippleFx (e) {
+    
+    e.preventDefault()
+
+    const press = e.currentTarget
+    
+    const circle = document.createElement('span')
+    const diameter = Math.max(press.offsetWidth, press.offsetHeight)
+    const radius = diameter / 2
+
+    const pressBox = press.getBoundingClientRect()
+    console.log(`press ripple test ${press.classList}`)
+
+
+    circle.style.width = circle.style.height = `${diameter}px`
+    circle.style.left = `${e.clientX - (pressBox.left + radius)}px`
+    circle.style.top = `${e.clientY - (pressBox.top + radius)}px`
+
+    const ripple = press.getElementsByClassName('ripple')[0]
+    const existingRipple = press.querySelector('.ripple')
+
+    circle.classList.add('ripple')
+
+    if (existingRipple) {
+        existingRipple.remove()
+    }
+
+    
+    press.appendChild(circle)
+
+}
+
 
 const checkScrollDir = () => {
     const menuLite = document.querySelector('.nav-container')
