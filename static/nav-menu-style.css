@@ -131,7 +131,7 @@
 
     padding: var(--spacing-lg) var(--spacing-md);
 
-    
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 }
 
@@ -237,6 +237,8 @@
 .expanded-container {
     display: grid;
     grid-template-columns: .5fr .5fr;
+
+    
 }
 
 .menu-expanded li {
@@ -270,6 +272,8 @@
 .expanded-content {
     display: flex;
     flex-direction: column;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 
