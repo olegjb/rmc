@@ -35,9 +35,9 @@
 }
 
 
-/* .ham-menu:hover, .logo:hover {
+.ham-menu:hover {
     cursor: pointer;
-} */
+}
 
 .nav-bar {
     display: grid;
@@ -89,7 +89,12 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: .21rem;
-    -webkit-transition: all 880ms ease;
+    /* -webkit-transition: all 880ms ease; */
+
+    pointer-events: none;
+
+    -webkit-transition: d 420ms ease;
+    transition: d 420ms ease;
 }
 
 
@@ -115,6 +120,20 @@
 
 }
 
+.ham-menu.expanded {
+    .line-three {
+        d: path("M4 6L20 18")
+    }
+
+    .line-two {
+        d: path("M4 12L4 12");
+        opacity: 0;
+    }
+
+    .line-one {
+        d: path("M4 18L20 6");
+    }
+}
 
 
 

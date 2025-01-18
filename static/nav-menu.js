@@ -193,11 +193,15 @@ function navBar() {
 
     // hover menu func
 
-    function toggleExpMenu () { 
+    function toggleExpMenu (e) { 
+        console.log(`testing ham menu click ${e.target.classList}`)
+
         if (expandedMenu.classList.contains('hidden')) {
+            e.target.classList.add('expanded')
             expandedMenu.classList.remove('hidden')
             expandedMenu.classList.add('expanded')
         } else {
+            e.target.classList.remove('expanded')
             expandedMenu.classList.remove('expanded')
             expandedMenu.classList.add('hidden')
         }
