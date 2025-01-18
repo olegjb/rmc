@@ -187,8 +187,6 @@
 }
 
 .menu-setting-toggle svg  {
-    
-    border: 2xp solid pink;
     fill: var(--font-primary-color);
     stroke: var(--font-primary-color);
     

@@ -79,7 +79,7 @@ body {
 
 .hero-header {
     font-size: 4.2rem;
-    font-weight: light;
+    font-weight: lighter;
     color: hsl(0, 0%, 12%);
 }
 
@@ -109,7 +109,7 @@ body {
     animation: btn-hover 600ms ease 10ms;
     animation-fill-mode: forwards;
     cursor: pointer;
-    transform: scale(.2rem);
+    
 }
 
 span.ripple {
