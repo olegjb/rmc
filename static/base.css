@@ -85,6 +85,7 @@ body {
 
 .hero-para {
     font-size: 1.2rem;
+    font-weight: lighter;
 }
 
 @media (max-width: 800px ) {
@@ -208,7 +209,10 @@ span.ripple {
 .landing-footer {
     min-height: var(--nav-height);
     background: none;
-    border-top: 2px solid var(--font-primary-color);
+    /* border-top: 2px solid var(--font-primary-color); */
+
+    background-color: var(--font-primary-color);
+    color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
